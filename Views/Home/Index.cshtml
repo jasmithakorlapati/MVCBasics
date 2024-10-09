@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    int x = 100;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Asp.net programming</h1>
+    <hr />
+    <h2>@ViewBag.Name</h2>
+    <h2>@ViewBag.Rank</h2>
+    <hr />
+    <h3>@ViewBag.GroupData.RollNo</h3>
+    <h3>@ViewBag.GroupData.Name</h3>
+    <h2>@ViewBag.GroupData.Age</h2>
+
+    @foreach (var item in ViewBag.List)
+    {
+        @item
+        <hr />
+        <hr />
+    }
+    @for (int i = 0; i < 10; i++)
+    {
+        <marquee>Dora-@x - @ViewBag.TimeNow</marquee>
+    }
+    
+</div>
